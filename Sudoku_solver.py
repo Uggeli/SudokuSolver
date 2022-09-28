@@ -1,3 +1,6 @@
+import time
+
+
 orginal = [
     [0,0,0, 0,0,0, 4,8,0],
     [0,5,0, 0,0,0, 0,0,3],
@@ -63,6 +66,8 @@ def print_sudoku_and_solution():
 unsolved = True
 numbers = set([n for n in range(0,10)])
 
+t = time.time()
+
 while unsolved:
     # find least possiblities
     taken = 0
@@ -95,7 +100,7 @@ while unsolved:
 
 
 print_sudoku_and_solution()  
-
+print(f"Solving took {time.time() - t} Seconds")
 
 
 
